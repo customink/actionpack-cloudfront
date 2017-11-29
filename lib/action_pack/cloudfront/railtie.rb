@@ -8,7 +8,7 @@ module ActionPack
       config.action_pack_cloudfront.load_proxies = !::Rails.env.test? && !::Rails.env.development?
 
       config.before_initialize do |app|
-        if app.config.load_proxies
+        if app.config.action_pack_cloudfront.load_proxies
           trusted_proxies = ActionPack::Cloudfront::IpRanges.trusted_proxies
           app.config.action_dispatch.trusted_proxies = trusted_proxies
         end
