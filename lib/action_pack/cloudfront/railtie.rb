@@ -14,6 +14,10 @@ module ActionPack
         end
       end
 
+      config.to_prepare do
+        ::ApplicationController.helper(ActionPack::Cloudfront::EuLocationDetection)
+      end
+
     end
   end
 end
