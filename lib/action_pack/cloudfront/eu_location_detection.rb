@@ -7,7 +7,7 @@ module ActionPack
                               |RS|SK|SI|ES|SE|CH|UA|GB|VA|RS)$/ix
 
       def request_from_eu?
-        country_code = ActionDispatch::Http::Headers.new(request.headers)['CloudFront-Viewer-Country']
+        country_code = request.headers['CloudFront-Viewer-Country']
         country_code_in_eu?(country_code)
       end
 
