@@ -15,7 +15,7 @@ module ActionPack
       end
 
       config.to_prepare do
-        ::ApplicationController.helper(ActionPack::Cloudfront::EuLocationDetection)
+        ::ApplicationController.send :include, ActionPack::Cloudfront::LocationHeaders
       end
 
     end
