@@ -2,19 +2,23 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
+## v1.0.4
+
+#### Changed
+
+* Updated backup JSON w/latest data
+
 ## v1.0.3
 
 #### Changed
 
 * Updated backup JSON w/latest data. Thanks Richard. Fixes #1.
 
-
 ## v1.0.2
 
 #### Changed
 
 * Updated backup JSON w/latest data. Thanks Richard. Fixes #1.
-
 
 ## v1.0.1
 
@@ -27,4 +31,3 @@ See this http://keepachangelog.com link for information on how we want this docu
 #### Added
 
 * Initial Release
-
