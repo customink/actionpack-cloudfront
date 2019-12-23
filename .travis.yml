@@ -11,11 +11,11 @@ cache:
     - $HOME/bin
     - $HOME/.bundle
 install:
-  - gem install bundler
+  - gem install bundler:1.16.0
   - export BUNDLE_PATH=$HOME/.bundle
   - bundle install
 install:
-  - gem install bundler
+  - gem install bundler:1.16.0
   - bundle --version
   - bundle install
 script:
