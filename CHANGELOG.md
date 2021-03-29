@@ -2,6 +2,12 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
+## v1.1.0
+
+#### Changed
+
+* Dependency on ActionPack vs Rails.
+
 ## v1.0.10
 
 #### Changed
