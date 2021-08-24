@@ -2,6 +2,12 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
+## v1.1.2
+
+#### Changed
+
+* Updated backup JSON w/latest data
+
 ## v1.1.1
 
 #### Changed
