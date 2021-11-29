@@ -16,10 +16,6 @@ module ActionPack
         end
       end
 
-      config.to_prepare do
-        ::ApplicationController.send :include, ActionPack::Cloudfront::LocationHeaders
-      end
-
     end
   end
 end

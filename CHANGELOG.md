@@ -2,6 +2,12 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
+## Unreleased
+
+#### Removed
+
+- Remove `request_eu?` helper method
+
 ## v1.2.0
 
 #### Changed
