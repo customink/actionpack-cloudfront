@@ -1,0 +1,101 @@
+---
+version: 2.1
+
+# ---------------------------------------------------------------------------------------------------------------------
+# CircleCI Snippets
+#
+# Reusable snippets are defined below this section. These are yaml fragments that can injected into the standard
+# CircleCI configuration, reducing the complexity of the entire block.
+# ---------------------------------------------------------------------------------------------------------------------
+docker_image: &docker_image
+  image: 916869144969.dkr.ecr.us-east-1.amazonaws.com/customink/ruby:focal-<< parameters.ruby-version >>
+  aws_auth:
+    oidc_role_arn: arn:aws:iam::916869144969:role/customink-continuous-integration
+
+# ---------------------------------------------------------------------------------------------------------------------
+# CircleCI Commands Configuration
+#
+# Commands are re-usable steps that can be shared across jobs. For example the installation of gems using bundler or
+# waiting on a database connection. By defining them inside the commands section, they can be invoked as any standard
+# command on the system, but will already be preconfigured. This allows us to keep the jobs definition small and clean
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# CircleCI Job Configuration
+#
+# This section defines all the available jobs that can be executed inside a Workflow.
+# Think of a Job as a batch of tasks that need to be performed to setup the environment and perform a specific task
+# such as running RSpec, uploading the test results to CodeClimate etc.
+# ---------------------------------------------------------------------------------------------------------------------
+jobs:
+  lint:
+    parameters:
+      ruby-version:
+        type: string
+    docker:
+      - <<: *docker_image
+    steps:
+      - checkout
+      - run:
+          name: "Bundle install"
+          command: |
+            bundle config --local path vendor/bundle/
+            bundle install
+      - run:
+          name: "RuboCop"
+          command: >
+            bundle exec rubocop
+            --require rubocop/formatter/junit_formatter
+            --format RuboCop::Formatter::JUnitFormatter
+            --out tmp/test-results/rubocop/results.xml
+      - store_artifacts:
+          path: tmp/test-results/rubocop/results.xml
+  tests:
+    parameters:
+      ruby-version:
+        type: string
+      gemfile:
+        type: string
+    docker:
+      - <<: *docker_image
+    steps:
+      - checkout
+      - run:
+          name: "Appraisal install"
+          command: |
+            bundle config --local path vendor/bundle/
+            bundle install
+            bundle exec appraisal install --path vendor/bundle/
+      - run:
+          name: "Run tests"
+          command: bundle exec appraisal << parameters.gemfile >> rake test
+      - store_test_results:
+          path: test/reports/
+
+# ---------------------------------------------------------------------------------------------------------------------
+# CircleCI Workflow Execution Order
+#
+# Here we define the Workflow, the order of the various jobs and their dependencies.
+# This allows us to decide whether to run certain tasks sequentially or run several of them in parallel.
+# ---------------------------------------------------------------------------------------------------------------------
+workflows:
+  actionpack-cloudfront:
+    jobs:
+      - lint:
+          ruby-version: "2.7"
+          context: customink
+      - tests:
+          name: "Test on Ruby 2.7 with Rails 4.2"
+          ruby-version: "2.7"
+          gemfile: "rails42"
+          context: customink
+      - tests:
+          name: "Test on Ruby 2.7 with Rails 5.0"
+          ruby-version: "2.7"
+          gemfile: "rails50"
+          context: customink
+      - tests:
+          name: "Test on Ruby 2.7 with Rails 5.1"
+          ruby-version: "2.7"
+          gemfile: "rails51"
+          context: customink
