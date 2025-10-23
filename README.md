@@ -1,7 +1,5 @@
 # Actionpack::Cloudfront
 
-[![Build Status](https://travis-ci.org/customink/actionpack-cloudfront.svg?branch=master)](https://travis-ci.org/customink/actionpack-cloudfront)
-
 Configure Rails' [ActionDispatch::RemoteIp](http://api.rubyonrails.org/classes/ActionDispatch/RemoteIp.html) to use Amazon CloudFront's IP ranges as trusted proxies.
 
 ## Installation & Usage
