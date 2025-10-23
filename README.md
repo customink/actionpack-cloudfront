@@ -1,10 +1,8 @@
-
 # Actionpack::Cloudfront
 
 [![Build Status](https://travis-ci.org/customink/actionpack-cloudfront.svg?branch=master)](https://travis-ci.org/customink/actionpack-cloudfront)
 
 Configure Rails' [ActionDispatch::RemoteIp](http://api.rubyonrails.org/classes/ActionDispatch/RemoteIp.html) to use Amazon CloudFront's IP ranges as trusted proxies.
-
 
 ## Installation & Usage
 
@@ -46,15 +44,13 @@ $ bundle exec appraisal rake test
 If you want to run the tests for a specific appraisal, use one of the names found in our `Appraisal` file. For example, the following will run our tests suite for Rails 4.2 only.
 
 ```shell
-$ bundle exec appraisal rails42 rake test
+$ bundle exec appraisal rails72 rake test
 ```
 
 ## Alternatives
 
 * [cloudfront-rails](https://github.com/dinks/cloudfront-rails) - Leverages cached HTTP requests to Cloudfront to extend Rails' trusted proxies list thru method patching vs assigning to ActionDispatch's trusted proxies config.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
