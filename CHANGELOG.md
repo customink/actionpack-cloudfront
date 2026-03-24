@@ -2,6 +2,12 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
+## v1.2.15
+
+#### Changed
+
+- Updated CloudFront IP ranges
+
 ## v1.2.14
 
 #### Changed
