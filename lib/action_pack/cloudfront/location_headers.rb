@@ -9,7 +9,9 @@ module ActionPack
                               |RS|SK|SI|ES|SE|CH|UA|GB|VA|RS)$/ix
 
       included do
-        helper_method :request_eu?
+        if respond_to?(:helper_method)
+          helper_method :request_eu?
+        end
       end
 
       private
