@@ -43,11 +43,11 @@ module ActionPack
         Timeout.timeout(5) do
           uri = URI('https://ip-ranges.amazonaws.com/ip-ranges.json')
           res = Net::HTTP.get(uri)
-          JSON.parse(res)
+          JSON.parse(res, freeze: true)
         end
       rescue
         backup_json = File.join File.dirname(__FILE__), 'ip-ranges.json'
-        JSON.parse File.read(backup_json)
+        JSON.load_file(backup_json, freeze: true)
       end
 
       extend self
