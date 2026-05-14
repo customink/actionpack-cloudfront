@@ -1,5 +1,5 @@
 module ActionPack
   module Cloudfront
-    VERSION = '1.2.15'.freeze
+    VERSION = '1.2.16'.freeze
   end
 end
