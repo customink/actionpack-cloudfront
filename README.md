@@ -2,6 +2,7 @@
 # Actionpack::Cloudfront
 
 [![Build Status](https://travis-ci.org/customink/actionpack-cloudfront.svg?branch=master)](https://travis-ci.org/customink/actionpack-cloudfront)
+[![Overall](https://img.shields.io/endpoint?style=flat&url=https://app.opslevel.com/api/service_level/K_8Q9fBdNil5RVIjmswuTWxeYJvDYJklTkbgmoxHpVM)](https://app.opslevel.com/services/actionpack-cloudfront/maturity-report)
 
 Configure Rails' [ActionDispatch::RemoteIp](http://api.rubyonrails.org/classes/ActionDispatch/RemoteIp.html) to use Amazon CloudFront's IP ranges as trusted proxies.
 
@@ -57,4 +58,3 @@ $ bundle exec appraisal rails42 rake test
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
