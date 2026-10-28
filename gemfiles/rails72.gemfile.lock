@@ -1,0 +1,275 @@
+GIT
+  remote: https://github.com/rails/rails.git
+  revision: 3690a3ab882476c5229c04c5ae993ba6fb469fc4
+  branch: 7-2-stable
+  specs:
+    actioncable (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      nio4r (~> 2.0)
+      websocket-driver (>= 0.6.1)
+      zeitwerk (~> 2.6)
+    actionmailbox (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      activejob (= 7.2.2.2)
+      activerecord (= 7.2.2.2)
+      activestorage (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      mail (>= 2.8.0)
+    actionmailer (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      actionview (= 7.2.2.2)
+      activejob (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      mail (>= 2.8.0)
+      rails-dom-testing (~> 2.2)
+    actionpack (7.2.2.2)
+      actionview (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      cgi
+      nokogiri (>= 1.8.5)
+      racc
+      rack (>= 2.2.4, < 3.3)
+      rack-session (>= 1.0.1)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+      useragent (~> 0.16)
+    actiontext (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      activerecord (= 7.2.2.2)
+      activestorage (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      globalid (>= 0.6.0)
+      nokogiri (>= 1.8.5)
+    actionview (7.2.2.2)
+      activesupport (= 7.2.2.2)
+      builder (~> 3.1)
+      cgi
+      erubi (~> 1.11)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+    activejob (7.2.2.2)
+      activesupport (= 7.2.2.2)
+      globalid (>= 0.3.6)
+    activemodel (7.2.2.2)
+      activesupport (= 7.2.2.2)
+    activerecord (7.2.2.2)
+      activemodel (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      timeout (>= 0.4.0)
+    activestorage (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      activejob (= 7.2.2.2)
+      activerecord (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      marcel (~> 1.0)
+    activesupport (7.2.2.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+    rails (7.2.2.2)
+      actioncable (= 7.2.2.2)
+      actionmailbox (= 7.2.2.2)
+      actionmailer (= 7.2.2.2)
+      actionpack (= 7.2.2.2)
+      actiontext (= 7.2.2.2)
+      actionview (= 7.2.2.2)
+      activejob (= 7.2.2.2)
+      activemodel (= 7.2.2.2)
+      activerecord (= 7.2.2.2)
+      activestorage (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      bundler (>= 1.15.0)
+      railties (= 7.2.2.2)
+    railties (7.2.2.2)
+      actionpack (= 7.2.2.2)
+      activesupport (= 7.2.2.2)
+      cgi
+      irb (~> 1.13)
+      rackup (>= 1.0.0)
+      rake (>= 12.2)
+      thor (~> 1.0, >= 1.2.2)
+      tsort (>= 0.2)
+      zeitwerk (~> 2.6)
+
+PATH
+  remote: ..
+  specs:
+    actionpack-cloudfront (1.2.10)
+      actionpack (>= 4.2)
+      railties (>= 4.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    appraisal (2.5.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    base64 (0.3.0)
+    benchmark (0.5.0)
+    bigdecimal (3.3.1)
+    builder (3.3.0)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+    cgi (0.5.0)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.4)
+    crass (1.0.6)
+    date (3.4.1)
+    drb (2.2.3)
+    erb (5.1.1)
+    erubi (1.13.1)
+    globalid (1.3.0)
+      activesupport (>= 6.1)
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
+    io-console (0.8.1)
+    irb (1.15.2)
+      pp (>= 0.6.0)
+      rdoc (>= 4.0.0)
+      reline (>= 0.4.2)
+    logger (1.7.0)
+    loofah (2.24.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.12.0)
+    mail (2.9.0)
+      logger
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    marcel (1.1.0)
+    matrix (0.4.3)
+    method_source (1.1.0)
+    mini_mime (1.1.5)
+    minitest (5.26.0)
+    net-imap (0.5.12)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.2)
+      timeout
+    net-smtp (0.5.1)
+      net-protocol
+    nio4r (2.7.4)
+    nokogiri (1.18.10-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.10-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.10-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.10-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.10-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.10-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.10-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.10-x86_64-linux-musl)
+      racc (~> 1.4)
+    pp (0.6.3)
+      prettyprint
+    prettyprint (0.2.0)
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    psych (5.2.6)
+      date
+      stringio
+    public_suffix (6.0.2)
+    puma (7.1.0)
+      nio4r (~> 2.0)
+    racc (1.8.1)
+    rack (3.2.3)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rackup (2.2.1)
+      rack (>= 3)
+    rails-dom-testing (2.3.0)
+      activesupport (>= 5.0.0)
+      minitest
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.6.2)
+      loofah (~> 2.21)
+      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rake (13.3.0)
+    rdoc (6.15.0)
+      erb
+      psych (>= 4.0.0)
+      tsort
+    regexp_parser (2.11.3)
+    reline (0.6.2)
+      io-console (~> 0.5)
+    rexml (3.4.4)
+    rubyzip (3.2.0)
+    securerandom (0.4.1)
+    selenium-webdriver (4.37.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 4.0)
+      websocket (~> 1.0)
+    stringio (3.1.7)
+    thor (1.4.0)
+    timeout (0.4.3)
+    tsort (0.2.0)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    useragent (0.16.11)
+    websocket (1.2.11)
+    websocket-driver (0.8.0)
+      base64
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
+    zeitwerk (2.7.3)
+
+PLATFORMS
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
+
+DEPENDENCIES
+  actionpack-cloudfront!
+  appraisal
+  bundler
+  capybara
+  pry
+  puma
+  rails!
+  rake
+  selenium-webdriver
+
+BUNDLED WITH
+   2.5.22
