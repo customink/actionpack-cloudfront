@@ -49,6 +49,10 @@ If you want to run the tests for a specific appraisal, use one of the names foun
 $ bundle exec appraisal rails42 rake test
 ```
 
+## Releasing
+
+Releases are published to GitHub Packages (`https://rubygems.pkg.github.com/customink`). Bump `VERSION` in `lib/action_pack/cloudfront/version.rb`, merge, then push a matching tag, for example `v1.2.22`. The `Publish package` workflow builds the gem and pushes it. The tag must equal `v` plus the gem version.
+
 ## Alternatives
 
 * [cloudfront-rails](https://github.com/dinks/cloudfront-rails) - Leverages cached HTTP requests to Cloudfront to extend Rails' trusted proxies list thru method patching vs assigning to ActionDispatch's trusted proxies config.

@@ -1,0 +1,34 @@
+name: Publish package
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: Check that the tag matches the gem version
+        run: |
+          version=$(ruby -Ilib -raction_pack/cloudfront/version -e 'puts ActionPack::Cloudfront::VERSION')
+          test "v$version" = "$GITHUB_REF_NAME"
+      - name: Build
+        run: gem build actionpack-cloudfront.gemspec
+      - name: Push to GitHub Packages
+        env:
+          GEM_HOST_API_KEY: "Bearer ${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          if ! output=$(gem push --host https://rubygems.pkg.github.com/customink actionpack-cloudfront-*.gem 2>&1); then
+            echo "$output"
+            echo "$output" | grep -q "has already been pushed" || exit 1
+            echo "Version already published, skipping"
+          else
+            echo "$output"
+          fi
