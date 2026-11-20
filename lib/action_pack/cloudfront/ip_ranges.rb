@@ -21,11 +21,11 @@ module ActionPack
       end
 
       def trusted_proxies
-        cloudfront_proxies + ActionDispatch::RemoteIp::TRUSTED_PROXIES
+        @trusted_proxies ||= (cloudfront_proxies + ActionDispatch::RemoteIp::TRUSTED_PROXIES).freeze
       end
 
       def cloudfront_proxies
-        ip_ranges.select(&:cloudfront?).map(&:ipaddr)
+        @cloudfront_proxies ||= (ip_ranges.select(&:cloudfront?).map(&:ipaddr)).freeze
       end
 
       def ip_ranges
@@ -35,7 +35,7 @@ module ActionPack
           prefixesv6 = data['ipv6_prefixes']
           (prefixes + prefixesv6).map do |attrs|
             Range.new(attrs)
-          end
+          end.freeze
         end
       end
 
